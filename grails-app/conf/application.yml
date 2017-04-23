@@ -113,25 +113,25 @@ environments:
         dataSource:
             dbCreate: update
             url: jdbc:h2:mem:testDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
-    production:
-        dataSource:
-            dbCreate: update
-            url: jdbc:postgres://npzgdzzmffgxel:1074e70008e73cc7d03f22eaf2c033c29d14eb25287bd1e04845e27f811c60f4@ec2-23-23-237-68.compute-1.amazonaws.com:5432/dc4dbevhhl56sk
-            properties:
-                jmxEnabled: true
-                initialSize: 5
-                maxActive: 50
-                minIdle: 5
-                maxIdle: 25
-                maxWait: 10000
-                maxAge: 600000
-                timeBetweenEvictionRunsMillis: 5000
-                minEvictableIdleTimeMillis: 60000
-                validationQuery: SELECT 1
-                validationQueryTimeout: 3
-                validationInterval: 15000
-                testOnBorrow: true
-                testWhileIdle: true
-                testOnReturn: false
-                jdbcInterceptors: ConnectionState
-                defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+#    production:
+#        dataSource:
+#            dbCreate: none
+#            url: jdbc:h2:./prodDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+#            properties:
+#                jmxEnabled: true
+#                initialSize: 5
+#                maxActive: 50
+#                minIdle: 5
+#                maxIdle: 25
+#                maxWait: 10000
+#                maxAge: 600000
+#                timeBetweenEvictionRunsMillis: 5000
+#                minEvictableIdleTimeMillis: 60000
+#                validationQuery: SELECT 1
+#                validationQueryTimeout: 3
+#                validationInterval: 15000
+#                testOnBorrow: true
+#                testWhileIdle: true
+#                testOnReturn: false
+#                jdbcInterceptors: ConnectionState
+#                defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
