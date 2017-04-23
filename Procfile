@@ -1,2 +1,1 @@
-web: java -Dgrails.env=prod -jar build/libs/jobjob-0.1.war --expand-war
-
+web: java $JAVA_OPTS -jar server/webapp-runner.jar --port $PORT target/*.war
