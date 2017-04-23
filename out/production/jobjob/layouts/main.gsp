@@ -10,12 +10,6 @@
 
     <asset:stylesheet src="application.css"/>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-
     <g:layoutHead/>
 </head>
 <body>
@@ -30,18 +24,21 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="/#">
-                    JobJob
+                    <i class="fa grails-icon">
+                        <asset:image src="grails-cupsonly-logo-white.svg"/>
+                    </i> Grails
                 </a>
-                <sec:ifLoggedIn>
-                    <g:link class="btn btn-link" controller="logout">Logout</g:link>
-                </sec:ifLoggedIn>
+            </div>
+            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
+                <ul class="nav navbar-nav navbar-right">
+                    <g:pageProperty name="page.nav" />
+                </ul>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <g:layoutBody/>
-    </div>
+    <g:layoutBody/>
+
     <div class="footer" role="contentinfo"></div>
 
     <div id="spinner" class="spinner" style="display:none;">

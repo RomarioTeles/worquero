@@ -13,15 +13,15 @@
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
-        <div id="create-post" class="container" role="main" >
+        <div id="create-post" role="main" >
             <h1><g:message code="default.create.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
-            <div class="alert-danger" role="status">${flash.message}</div>
+            <div class="alert alert-danger" role="status">${flash.message}</div>
             </g:if>
             <g:hasErrors bean="${this.post}">
-            <ul class="errors" role="alert">
+            <ul class="alert alert-danger" role="alert">
                 <g:eachError bean="${this.post}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
+                <li class="list-unstyled" <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
                 </g:eachError>
             </ul>
             </g:hasErrors>
